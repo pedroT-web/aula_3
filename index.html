@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+
+<style>
+    /* Estilização do texto, chamando o pela clase */
+    .texto{
+        background-color: tomato;
+        color: aliceblue;
+        font-size: 30px;
+    }
+
+    
+</style>
+
+<body>
+    <H1 class="texto">Aula de js</H1>
+
+    <p class="texto"  id="textoPersonalizado">Aqui vai meu texto personalizado</p>
+
+    <!-- Usa se # para chamar o id de um paragrafo -->
+    <script>
+    // alert() serve para exibir um alerta na tela
+
+
+    // criar uma função
+    function funcaoTop(){
+        alert('minha função funcionou')
+    }
+
+    // chamar uma função
+    //  funcaoTop()
+
+    function adicionarTexto(){
+        alert('deseja adicionar o texto?')
+        
+        // chamar um elemento pelo ID dela
+        textoLocal = document.getElementById('textoPersonalizado').innerHTML
+        console.log(textoLocal)
+
+        // alterar o valor deste elemento 
+        document.getElementById('textoPersonalizado').innerHTML = 'Um texto do balacubaco'
+    }
+
+
+    // console.log serve para apresentar logs "registros"
+    console.log('Aqui eu tenho um texto top!!!')
+    // OPERADORES ARITMETRICOS
+    // + Soma
+    // - Subtrai
+    // * Multiplica
+    // / Divide
+
+
+    // Para declarar uma variavel, apenas coloque o nome e o valor que ela vai receber, o java script ja vai reconhecer o tipo dessa variável. pois java script não tem tipagem de variável
+    numero = 1
+    texto = 'texto'
+    numeroQuebrado = 6.8
+    verdadeiroFalso = // true or false
+
+    console.log(numero, texto, numeroQuebrado)
+    // parseInt transforma texto em numero
+    console.log(8 + parseInt('2'))
+
+    // Operadores Lógicos
+    // ===  comparação
+    // !==  compara as diferenças
+    // ==   igual
+    // !=   diferente
+    // >    maior
+    // <    menor
+    // >=   maior igual
+    // <=   menor igual
+
+    console.log(1 === 1)
+    console.log(1 !== 1)
+
+
+    if (1 == 2){
+     console.log('estou dentro do IF')   
+    }
+    else if (2 == 2){
+        console.log('estou dentro do ELSE IF')
+    }
+    else{
+        console.log('estou dentro do ELSE')
+    }
+
+    for (i = 1; i <= 5; i++){
+        console.log('valor de i: ' + i)
+    }
+
+    contador = 1
+    while (contador < 10){
+        contador++
+        
+        // o continue usa se para otimizar tempo, ele pula a condição declarada
+        if (contador == 2){
+            continue
+        }
+
+        // break serve para parar o laço
+        if (contador == 5){
+            break
+        }
+        
+        console.log('valor de contador' + contador)
+        
+    }
+
+
+</script>
+
+</body>
+</html>
